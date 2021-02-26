@@ -1,0 +1,72 @@
+.bg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fdfdfd;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 70%;
+}
+
+.authBox{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    height: 90%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.login{
+    
+    font-size: 40px;
+    color: rgb(70, 70, 70);
+}
+
+.bottomMessage{
+    color:rgb(42, 66, 108);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bottomMessage:hover{
+    color:rgb(81, 124, 199);
+    cursor: pointer;
+}
+
+.logo{
+    padding: 10px;
+    margin: 0 0 0 5%;
+    border-radius: 15px;
+    border: 10px solid rgb(42, 66, 108);
+    width: 300px;
+}
+
+.vr{
+    width: 2px;
+    height: 100%;
+    background-color: #fdfdfd;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.error{
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px;
+}

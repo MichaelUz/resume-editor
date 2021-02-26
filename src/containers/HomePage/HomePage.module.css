@@ -1,0 +1,66 @@
+.HomePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
+.infoCard{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 3px 3px 30px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.infoCardText{
+    width: 100%;
+    padding-left: 15px;
+}
+
+.vr{
+    height: 600px;
+    width: 1px;
+    background-color: rgb(175, 175, 175);
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.welcome1{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.welcome2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #90907f;
+    margin-top: 1px;
+}
+
+.signOut{
+    position: absolute;
+    width: 100%;
+    border: none;
+    margin-top: 5px;
+    height: 40px;
+    transition: 0.2s;
+    bottom: 20px;
+}
+
+.signOut:hover{
+    background-color: #90907f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,18 @@
+.SectionNavItem{
+    outline: none; 
+    border: none;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.SectionNavItem:hover{
+    color: rgb(42, 66, 108);
+}
+
+.Selected{
+    transition: 0.2s linear;
+    border-bottom: 2px solid rgb(42, 66, 108);
+    color: rgb(42, 66, 108);
+}

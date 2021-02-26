@@ -1,0 +1,39 @@
+.PagingButton{
+    outline: 0;
+    color: rgb(113, 116, 97);
+    border: transparent;
+    font-size: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Next{
+    margin-left: auto;
+}
+
+.Previous{
+    margin-right: auto;
+}
+
+
+.PagingButton:hover{
+    color:  rgb(62, 131, 190);
+}
+
+.PagingButton:active{
+    color: rgb(0, 0, 0);
+}
+
+.Buttons{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    min-width: 100px;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}

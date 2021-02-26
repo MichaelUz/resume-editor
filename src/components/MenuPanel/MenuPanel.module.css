@@ -1,0 +1,55 @@
+.panel{
+    transform: translateX(-30vw);
+    width: 0vw;
+    height: 100%;
+}
+
+.panelOn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(246, 246, 246);
+    width: 30vw;
+    height: 100vh;
+    transition: 0.3s;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.bgOn{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bg{
+    display: none;
+    z-index: -3;
+}
+
+.email {
+    margin-left: 10px;
+}
+
+.button{
+    border-top: 1px solid rgb(42, 66, 108);
+    border-bottom: 1px solid rgb(42, 66, 108);
+    border-left: none;
+    border-right: none;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    background-color: white;
+    height: 60px;
+}
+
+.button:hover{
+    background-color: rgb(42, 66, 108);
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+}

@@ -1,0 +1,27 @@
+.AddResumeButton{
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    color: rgb(42, 66, 108);
+    outline: none;
+    background-color: white;
+    box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.AddResumeButton:hover{
+    background-color: #90907f;
+    color: white;
+    box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.AddResumeButton:active{
+    transition: 0.1s;
+    box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.1);
+}

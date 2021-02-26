@@ -1,0 +1,44 @@
+.Resumes{
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgb(189, 189, 189);
+    width: 100%;
+    animation: fadeinout 0.7s linear;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.Resumes::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+    width: 2px;
+}
+
+.Resumes::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.Resumes::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #484b36;
+}
+
+@keyframes fadeinout{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.ResumePreviews{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-height: 500px;
+    align-items: center;
+    box-shadow: 3px 3px 30px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}

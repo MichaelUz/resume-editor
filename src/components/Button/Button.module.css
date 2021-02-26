@@ -1,0 +1,41 @@
+.ButtonWhite{
+    width: 100%;
+    color: rgb(42, 66, 108);
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid rgb(42, 66, 108);
+    height: 30px;
+    transition: 0.2s;
+    outline: none;      ;
+}
+
+.ButtonWhite:hover{
+    background-color: rgb(42, 66, 108);
+    color: white;
+}
+
+.ButtonWhite:active{
+    background-color: rgb(23, 36, 59);
+}
+
+.ButtonBlue{
+    width: 100%;
+    background-color: rgb(42, 66, 108);
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid rgb(42, 66, 108);
+    height: 30px;
+    transition: 0.2s;
+    outline: none;      ;
+}
+
+.ButtonBlue:hover{
+    color: rgb(42, 66, 108);
+    background-color: white;
+}
+
+.ButtonBlue:active{
+    background-color: rgb(187, 187, 187);
+}

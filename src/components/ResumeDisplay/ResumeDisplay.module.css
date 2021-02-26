@@ -1,0 +1,8 @@
+.ResumeDisplay{
+    padding: 0px;
+    height: 780px;
+    width: 600px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}

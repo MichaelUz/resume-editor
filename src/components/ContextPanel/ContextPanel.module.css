@@ -1,0 +1,11 @@
+.ContextPanel{
+    min-width: 700px;
+    width: 50vw;
+    height: 100vh;
+    z-index: 1;
+    box-shadow: -5px 0px 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: rgb(246, 246, 246);
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,63 @@
+.GeneralInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Inputs{
+    display: flex;
+    flex-direction: row;
+}
+
+.hr{
+    width: 100%;
+    margin-top: 15px;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.Download{
+    width: 20%;
+    height: 33px;
+    margin-top: auto;
+    color: white;
+    background-color: #90907f;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 1px;
+    margin-right: 5px;
+}
+
+.Save{
+    width: 20%;
+    height: 32px;
+    margin-top: auto;
+    color: white;
+    background-color: rgb(42, 66, 108);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 1px;
+    margin-right: 5px;
+}
+
+.Download:hover{
+    background-color: #717461;
+}
+
+.Save:hover{
+    background-color: rgb(26, 41, 66);
+}
+
+.Save:active{
+    background-color: rgb(20, 32, 51);
+}
+
+.Download:active{
+    background-color: #484b36;
+}

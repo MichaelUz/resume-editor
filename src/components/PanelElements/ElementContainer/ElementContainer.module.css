@@ -1,0 +1,32 @@
+.Form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.Title{
+    width: auto;
+    border-bottom: 2px solid rgb(42, 66, 108);
+}
+
+.Save{
+    width: 100%;
+    color: rgb(42, 66, 108);
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid rgb(42, 66, 108);
+    height: 30px;
+    transition: 0.2s;
+    outline: none;      ;
+}
+
+.Save:hover{
+    background-color: rgb(42, 66, 108);
+    color: white;
+}
+
+.Save:active{
+    background-color: rgb(23, 36, 59);
+}

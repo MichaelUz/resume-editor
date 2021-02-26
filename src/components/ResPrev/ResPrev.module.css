@@ -1,0 +1,69 @@
+.ResPrev{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.2s;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    border-bottom: 1px solid rgb(189, 189, 189);;
+}
+
+.ResPrev:hover{
+    background-color: #90907f;
+    color: white;
+}
+
+.vr{
+    height: 50%;
+    width: 1px;
+    border: none;
+    background-color: #484b36;
+    margin: 10px;
+}
+
+.button{
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    color: #484b36;
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #484b36;
+    color: white;
+    transition: 0.2s;
+}
+
+a:active, a:visited, a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.p{
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 20px;
+}
+
+.image{
+    top: 0;
+    margin: 0px;
+    padding: 0px;
+    height: 90%;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+}

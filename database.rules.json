@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "resumeContents": {
+      "Guest": {
+        ".read": "true",
+        ".write": "false"
+      },
+      "$userId": {
+        ".write": "$userId === auth.uid",
+        ".read": "$userId === auth.uid"
+      }
+    },
+    "resumes": {
+      "$userId": {
+        ".write": "$userId === auth.uid",
+        ".read": "$userId === auth.uid"
+      }
+    }
+  }
+}
