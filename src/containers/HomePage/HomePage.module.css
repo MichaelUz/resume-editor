@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    padding-top: 5vh;
 }
 
 .content{
@@ -63,4 +64,54 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .content{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .infoCard{
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        height: 50px;
+        padding-left: 5px;
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        outline: none;
+        background-color: white;
+        box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.3);
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    .signOut{
+        position: static;
+        width: 30%;
+        border: none;
+        border-radius: 0 10px 10px 0px;
+        margin-top: 0px;
+        margin-left: 6px;
+        height: 100%;
+        bottom: 0px;
+    }
+
+    .welcome2{
+        font-weight: bold;
+        font-size: 15px;
+        text-size-adjust: initial;
+        color: #90907f;
+        margin: auto;
+    }
+    
 }

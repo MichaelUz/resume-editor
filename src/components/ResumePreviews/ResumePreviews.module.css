@@ -42,3 +42,14 @@
     padding-right: 30px;
     padding-bottom: 20px;
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .ResumePreviews{
+        width: 60%;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+}

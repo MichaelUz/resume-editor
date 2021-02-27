@@ -56,7 +56,7 @@ const AuthPage = (props) => {
     }
     
     let jsx;
-    if(window.screen.width > 1000 ){
+    if(width > 1000 ){
         jsx = 
             <div className={classes.bg}>
                 <div className={classes.content}>
@@ -93,11 +93,7 @@ const AuthPage = (props) => {
         jsx = 
             <div className={classes.bg}>               
                 <div className={classes.content}>
-                    <div className={classes.title}>
-                        <img className={classes.logo} src={logo}/>
-                        <div className={classes.vr}></div>
-                        <MainTitle/>
-                    </div>
+                    <MainTitle/>
                     <div className={classes.authBox}>
                         <h1 className={classes.login}>{auth.login ? 'Login' : 'Register'}</h1>
                         <Input

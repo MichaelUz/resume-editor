@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { connect } from 'react-redux';
 import MainTitle from '../../components/MainTitle/MainTitle';
 import ResumePreviews from '../../components/ResumePreviews/ResumePreviews';
@@ -17,6 +17,15 @@ const HomePage = (props) => {
    
     let [renderState, updateRenderState] = useState('none');
     let [resumes, updateResumes] = useState([]);
+
+    //Add event listener for screen width
+    const [width, updateWidth] = useState(window.innerWidth);
+    useLayoutEffect(() => {
+        const updateWidthFunc = () => updateWidth(window.innerWidth)
+        window.addEventListener('resize', updateWidthFunc);
+
+        return () => window.removeEventListener('resize', updateWidthFunc);
+    }, []);
 
     //Render login or home page based on if we're logged in.
     useEffect(() => {
@@ -113,23 +122,40 @@ const HomePage = (props) => {
             break;
 
         case 'home':
-            jsx = 
-            <div className={classes.HomePage}>
-                <MainTitle/>
-                <div className={classes.content}>
-                    <div className={classes.infoCard}>
-                        <div className={classes.infoCardText}>
-                            <p className={classes.welcome1}>Logged in as</p>
-                            <p className={classes.welcome2}>{props.user.email}</p>
+            if(window.innerWidth > 1000){
+                jsx = 
+                    <div className={classes.HomePage}>
+                        <MainTitle/>
+                        <div className={classes.content}>
+                            <div className={classes.infoCard}>
+                                <div className={classes.infoCardText}>
+                                    <p className={classes.welcome1}>Logged in as</p>
+                                    <p className={classes.welcome2}>{props.user.email}</p>
+                                </div>
+                                <button onClick={signout} className={classes.signOut}>Sign out</button>
+                            </div>
+                            <div className={classes.vr}></div>
+                            <ResumePreviews resumes={resumesJSX}/>
                         </div>
-                        <button onClick={signout} className={classes.signOut}>Sign out</button>
-                    </div>
-                    <div className={classes.vr}></div>
-                    <ResumePreviews resumes={resumesJSX}/>
-                </div>
-               
-                <AddResumeButton click={addResume}/>
-            </div>;
+                    
+                        <AddResumeButton click={addResume}/>
+                    </div>;
+            }
+            else {
+                jsx = 
+                    <div className={classes.HomePage}>
+                            <MainTitle/>
+                            <div className={classes.content}>
+                                <ResumePreviews resumes={resumesJSX}/>
+                                <div className={classes.infoCard}>
+                                    <p className={classes.welcome2}>{props.user.email}</p>
+                                    <button onClick={signout} className={classes.signOut}>Sign out</button>
+                                </div>
+                            </div>
+                            <AddResumeButton click={addResume}/>
+                    </div>;
+            }
+            
             break;
         
         case 'auth':

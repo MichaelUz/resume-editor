@@ -33,6 +33,29 @@
     color: rgb(40, 40, 40);
 }
 
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.vr{
+    width: 15px;
+    height: 65%;
+    background-color: rgb(42, 66, 108);
+    margin-left: 15px;
+    box-shadow: none;
+}
+
+.logo{
+    padding: 5px;
+    margin: 0 0 0 5%;
+    border-radius: 5px;
+    border: 3px solid rgb(42, 66, 108);
+    width: 50px;
+}
+
 @media only screen and (max-width: 1000px) {
 
     .titleBlue{
