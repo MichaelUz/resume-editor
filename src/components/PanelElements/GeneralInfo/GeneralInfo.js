@@ -24,7 +24,7 @@ const GeneralInfo = (props) => {
                     })}
                     val={inputState.name}
                 />
-                <button onClick={() => props.save(inputState)} className={classes.Save}>Save</button>
+                <button onClick={() => props.save(inputState)} className={classes.Save}>Update Name</button>
             </div>
             <hr className={classes.hr}/>
         </div>

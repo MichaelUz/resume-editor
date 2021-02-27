@@ -1,6 +1,8 @@
 import React from 'react';
-import {PDFViewer,  Page, Text, View, Document, Font } from '@react-pdf/renderer';
-import TitledSection from './TitledSection';
+import {PDFViewer,  Page, Text, View, Document, Font, PDFDownloadLink } from '@react-pdf/renderer';
+import { withRouter } from 'react-router-dom';
+import MainTitle from '../MainTitle/MainTitle';
+import Button from '../Button/Button';
 import * as Sections from './Sections';
 
 import allStyles from './styles';
@@ -32,21 +34,41 @@ const ResumeDisplay = (props) => {
     
     // Create Document Component
     const MyDocument = () => (
-        <PDFViewer style={styles.pdfViewer} scale={2.0}>
-            <Document title={props.title}>
-                <Page size="LETTER" style={styles.page}>
-                    {sectionsJSX}
-                </Page>
-            </Document>
-        </PDFViewer>
+        <Document title={props.title}>
+            <Page size="LETTER" style={styles.page}>
+                {sectionsJSX}
+            </Page>
+        </Document>
     );
     
-    return (
+    //Show pdf viewer on desktop
+    let jsx = 
         <div className={classes.ResumeDisplay}>
-            {MyDocument()}
+            <PDFViewer style={styles.pdfViewer} scale={2.0}>
+                {MyDocument()}
+            </PDFViewer>
         </div>
-    );
+
+    let fileName = props.title.replace(/\s/g, '') + '.pdf';
+    
+    //On mobile display download button instead of resume
+    if(window.innerWidth < 1000){
+        jsx =
+        <div className={classes.downloadPage}>
+            <MainTitle/>
+            <PDFDownloadLink className={classes.download} document={<MyDocument/>} fileName={fileName}>
+                {({ blob, url, loading, error }) => (loading ? '...' : 'Download')}
+            </PDFDownloadLink>
+            <p>{fileName}</p>
+            <div className={classes.button}>
+                <Button click={() => props.history.push('/')} width="30%" color="blue">Home</Button>
+            </div>
+            
+        </div>
+    }
+    
+    return jsx;
 
 }
 
-export default ResumeDisplay;
+export default withRouter(ResumeDisplay);

@@ -52,7 +52,9 @@ const Editor = (props) =>{
 
     if(props.resume !== 'none'){
         resumeDisplay = <ResumeDisplay title={props.meta.name} resume={props.resume}/>;
-        contextPanel = <ContextPanel save={updateResume} data={props.resume} meta={props.meta} metaUpdate={updateMetaDB} user={props.user}/>;
+
+        if(window.innerWidth > 1000)
+            contextPanel = <ContextPanel save={updateResume} data={props.resume} meta={props.meta} metaUpdate={updateMetaDB} user={props.user}/>;
     } 
         
     //Conditionnaly render

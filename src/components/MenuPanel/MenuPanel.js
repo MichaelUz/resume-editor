@@ -27,7 +27,7 @@ const MenuPanel = (props) => {
         }
     }
 
-    return(
+    let jsx = 
         <div>
             <div className={bgClass} onClick={props.close}></div>
             <div className={panelClass}>
@@ -36,8 +36,12 @@ const MenuPanel = (props) => {
                 {props.email !== 'Guest' ? <button className={classes.button} onClick={signout}>Sign out</button> : null}
             </div>
         </div>
-        
-    );
+
+    if(window.innerWidth < 1000){
+        jsx = null;
+    }
+    
+    return jsx;
 }
 
 export default withRouter(MenuPanel);
