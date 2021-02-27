@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { connect } from 'react-redux';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
+import MainTitle from '../../components/MainTitle/MainTitle';
 import * as actions from '../../store/actions';
 import logo from '../../assets/images/myresume_logo.png';
 import { withRouter } from 'react-router-dom';
@@ -17,6 +18,15 @@ const AuthPage = (props) => {
         login: true,
         errorMessage: ''
     });   
+
+    const [width, updateWidth] = useState(window.innerWidth);
+
+    useLayoutEffect(() => {
+        const updateWidthFunc = () => updateWidth(window.innerWidth)
+        window.addEventListener('resize', updateWidthFunc);
+
+        return () => window.removeEventListener('resize', updateWidthFunc);
+    }, []);
 
     const bottomMessage = auth.login ? "Don't have an account? Create an account." :
         "Already got an account? Login.";
@@ -44,40 +54,79 @@ const AuthPage = (props) => {
         props.setUser();
         props.history.push('/editor');
     }
-   
-
-    return(
-        <div className={classes.bg}>
-           <div className={classes.content}>
-                <img className={classes.logo} src={logo}/>
-                <div className={classes.vr}></div>
-                <div className={classes.authBox}>
-                    <h1 className={classes.login}>{auth.login ? 'Login' : 'Register'}</h1>
-                    <Input
-                        label="Email"
-                        width='60%'
-                        update={(event) => updateAuth({...auth, email: event.target.value})}
-                        val={auth.email}
-                    />
-                    <Input
-                        label="Password"
-                        width='60%'
-                        type='password'
-                        update={(event) => updateAuth({...auth, password: event.target.value})}
-                        val={auth.password}
-                    />
-                    <p className={classes.bottomMessage} onClick={toggleLogin }>{bottomMessage}</p>
-                    <div>
-                        <Button click={authenticate}>{auth.login ? 'Login' : 'Register'}</Button>
+    
+    let jsx;
+    if(window.screen.width > 1000 ){
+        jsx = 
+            <div className={classes.bg}>
+                <div className={classes.content}>
+                    <img className={classes.logo} src={logo}/>
+                    <div className={classes.vr}></div>
+                    <div className={classes.authBox}>
+                        <h1 className={classes.login}>{auth.login ? 'Login' : 'Register'}</h1>
+                        <Input
+                            label="Email"
+                            width='60%'
+                            update={(event) => updateAuth({...auth, email: event.target.value})}
+                            val={auth.email}
+                        />
+                        <Input
+                            label="Password"
+                            width='60%'
+                            type='password'
+                            update={(event) => updateAuth({...auth, password: event.target.value})}
+                            val={auth.password}
+                        />
+                        <p className={classes.bottomMessage} onClick={toggleLogin }>{bottomMessage}</p>
+                        <div>
+                            <Button click={authenticate}>{auth.login ? 'Login' : 'Register'}</Button>
+                        </div>
+                        <div>
+                            <Button click={loginAsGuest}>Continue as Guest</Button>
+                        </div>
+                        <p className={classes.error}>{auth.errorMessage}</p>
                     </div>
-                    <div>
-                        <Button click={loginAsGuest}>Continue as Guest</Button>
-                    </div>
-                    <p className={classes.error}>{auth.errorMessage}</p>
                 </div>
-            </div>
         </div> 
-    )
+    }
+    else{
+        jsx = 
+            <div className={classes.bg}>               
+                <div className={classes.content}>
+                    <div className={classes.title}>
+                        <img className={classes.logo} src={logo}/>
+                        <div className={classes.vr}></div>
+                        <MainTitle/>
+                    </div>
+                    <div className={classes.authBox}>
+                        <h1 className={classes.login}>{auth.login ? 'Login' : 'Register'}</h1>
+                        <Input
+                            label="Email"
+                            width='60%'
+                            update={(event) => updateAuth({...auth, email: event.target.value})}
+                            val={auth.email}
+                        />
+                        <Input
+                            label="Password"
+                            width='60%'
+                            type='password'
+                            update={(event) => updateAuth({...auth, password: event.target.value})}
+                            val={auth.password}
+                        />
+                        <p className={classes.bottomMessage} onClick={toggleLogin }>{bottomMessage}</p>
+                        <div>
+                            <Button click={authenticate}>{auth.login ? 'Login' : 'Register'}</Button>
+                        </div>
+                        <div>
+                            <Button click={loginAsGuest}>Continue as Guest</Button>
+                        </div>
+                        <p className={classes.error}>{auth.errorMessage}</p>
+                    </div>
+                </div>
+            </div> 
+    }
+
+    return jsx;
 }
 
 const mapStateToProps = (state) => {

@@ -32,3 +32,21 @@
     color: white;
     color: rgb(40, 40, 40);
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .titleBlue{
+        font-size: 30px;
+        margin-right: 0;
+    }
+
+    .titleBlack{
+        font-size: 30px;
+    }
+
+    .titleBox{
+        border-bottom: none;
+        background-color: transparent;
+    }
+
+}
