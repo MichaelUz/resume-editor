@@ -9,8 +9,7 @@
     align-items: flex-start;
     flex-direction: column;
     background-color: rgb(164, 164, 147);
-    background-color: white;
-    border-bottom: 3px solid rgb(113, 116, 97);
+    background-color: transparent;
 }
 
 .titleText{
@@ -38,22 +37,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    height: 100px;
 }
 
 .vr{
-    width: 15px;
-    height: 65%;
-    background-color: rgb(42, 66, 108);
+    border: 1px solid rgb(42, 66, 108);
+    height: 60%;
     margin-left: 15px;
-    box-shadow: none;
 }
 
 .logo{
-    padding: 5px;
     margin: 0 0 0 5%;
     border-radius: 5px;
     border: 3px solid rgb(42, 66, 108);
     width: 50px;
+    padding: 4px;
+    background-color: white;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -65,11 +64,6 @@
 
     .titleBlack{
         font-size: 30px;
-    }
-
-    .titleBox{
-        border-bottom: none;
-        background-color: transparent;
     }
 
 }

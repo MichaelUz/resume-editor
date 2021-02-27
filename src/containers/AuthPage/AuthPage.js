@@ -98,13 +98,13 @@ const AuthPage = (props) => {
                         <h1 className={classes.login}>{auth.login ? 'Login' : 'Register'}</h1>
                         <Input
                             label="Email"
-                            width='60%'
+                            width='70%'
                             update={(event) => updateAuth({...auth, email: event.target.value})}
                             val={auth.email}
                         />
                         <Input
                             label="Password"
-                            width='60%'
+                            width='70%'
                             type='password'
                             update={(event) => updateAuth({...auth, password: event.target.value})}
                             val={auth.password}
