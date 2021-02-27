@@ -47,6 +47,7 @@
     font-size: 20px;
     color: #90907f;
     margin-top: 1px;
+    text-overflow: ellipsis;
 }
 
 .signOut{
@@ -97,11 +98,12 @@
     }
 
     .welcome2{
+        overflow: hidden;
         font-weight: bold;
         font-size: 15px;
-        text-size-adjust: initial;
         color: #90907f;
         margin: auto;
+        width: calc(70%);
     }
     
 }

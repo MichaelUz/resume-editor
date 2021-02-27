@@ -9,7 +9,6 @@ const ResumePreview = (props) => {
             <div className={classes.ResPrev} onClick={props.click}>
                 <p className={classes.p}>{props.title}</p>       
             </div>
-            <div className={classes.vr}></div>
             <button className={classes.button} onClick={props.delete}>X</button>
         </div>
     );
