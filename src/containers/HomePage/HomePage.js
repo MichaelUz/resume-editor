@@ -145,12 +145,10 @@ const HomePage = (props) => {
                 jsx = 
                     <div className={classes.HomePage}>
                             <MainTitle/>
-                            <div className={classes.content}>
-                                <ResumePreviews resumes={resumesJSX}/>
-                                <div className={classes.infoCard}>
-                                    <p className={classes.welcome2}>{props.user.email}</p>
-                                    <button onClick={signout} className={classes.signOut}>Sign out</button>
-                                </div>
+                            <ResumePreviews resumes={resumesJSX}/>
+                            <div className={classes.infoCard}>
+                                <p className={classes.welcome2}>{props.user.email}</p>
+                                <button onClick={signout} className={classes.signOut}>Sign out</button>
                             </div>
                             <AddResumeButton click={addResume}/>
                     </div>;

@@ -47,6 +47,8 @@
 
     .ResumePreviews{
         width: 75%;
+        max-height: 450px;
+        margin-top: 5vh;
     }
 
     h2{

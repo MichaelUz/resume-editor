@@ -68,16 +68,6 @@
 
 @media only screen and (max-width: 1000px) {
 
-    .content{
-        display: flex;
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 100px;
-    }
-
     .infoCard{
         position: static;
         display: flex;
