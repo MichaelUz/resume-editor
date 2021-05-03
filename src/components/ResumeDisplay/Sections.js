@@ -183,14 +183,16 @@ const ProjExp = (props) => {
             return(
                 <View key={index} style={styles.view}>
                     <View style={styles.header}>
-                        <Text style={styles.title}>{element[key] + ' | '}</Text>
-                        {descComponents}
+                        <View style={styles.titleDesc}>
+                            <Text style={styles.title}>{element[key] + ' | '}</Text>
+                            {descComponents}
+                        </View>
+                        <View style={styles.timelineView}>
+                            <Text style={styles.timeline}>{element.timeline}</Text>
+                        </View>
                     </View>
                     <View style={styles.responsibilitiesView}>
                         {textComponents}
-                    </View>
-                    <View style={styles.timelineView}>
-                        <Text style={styles.timeline}>{element.timeline}</Text>
                     </View>
                 </View>
             );

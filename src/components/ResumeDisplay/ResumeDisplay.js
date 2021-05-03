@@ -57,7 +57,7 @@ const ResumeDisplay = (props) => {
         <div className={classes.downloadPage}>
             <MainTitle/>
             <PDFDownloadLink className={classes.download} document={<MyDocument/>} fileName={fileName}>
-                {({ blob, url, loading, error }) => (loading ? '...' : 'Download')}
+                {({ blob, url, loading, error }) => (loading ? '   ...' : 'Download')}
             </PDFDownloadLink>
             <p>{fileName}</p>
             <div className={classes.button}>

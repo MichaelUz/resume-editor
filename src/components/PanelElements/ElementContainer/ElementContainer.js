@@ -11,7 +11,7 @@ const ElementContainer = (props) => {
             <div className={classes.Form}>
                 {props.children}
             </div>
-            <Button color={'white'} click={props.save}>Save</Button>
+            <Button color={'white'} click={props.save}>Save Section</Button>
         </div>
     );
 }

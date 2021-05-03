@@ -35,13 +35,13 @@ const borderBlue = '#99a4b8';
 const nameFS = 22;
 const infoFS = 11;
 const headingTitleFS = 14;
-const regular = 10.3;
+const regular = 10;
 const small = 9;
 const bulletSize = 14;
 const descriptionSize = 10;
 
 //other
-const sectionPadding = '6pt';
+const sectionPadding = '15pt';
 const sectionMargin = '8pt';
 
 //Word -> PDF font size
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
             display: 'flex',
             flexDirection: 'row',
             width: '100%',
+            marginBottom: -6,
         },
         headingTitle:{
             color: headingBlue,
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
-            paddingTop: sectionPadding
+            paddingTop: 12
         },
         educationLeft:{
             display: 'flex',
@@ -204,15 +205,22 @@ const styles = StyleSheet.create({
         view:{
             paddingTop: sectionPadding,
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
         },
         header:{
             display: 'flex',
             flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: '100%',
+            alignItems: 'center',
+            marginBottom: '0pt',
+            paddingBottom: '0pt',
+        },
+        titleDesc:{
+            display: 'flex',
+            flexDirection: 'row',
             justifyContent: 'flex-start',
             alignItems: 'center',
-            width: '100%',
-            marginBottom: 4,
         },
         title:{
             color: headingBlue,
@@ -227,8 +235,7 @@ const styles = StyleSheet.create({
         responsibilitiesView:{
             display: 'flex',
             flexDirection: 'column',
-            marginLeft: '5pt',
-            marginTop: '4pt',
+            marginTop: '2pt',
             flexWrap: 'wrap',
             width: '100%'
         },
@@ -239,14 +246,11 @@ const styles = StyleSheet.create({
         timelineView:{
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'flex-end',
-            width: '100%'
         },
         timeline:{
             color: schoolBlue,
             fontSize: small,
             fontWeight: 'bold' ,
-            margin: '6pt 0 6pt 0'
         }
     },
     Skills: {
