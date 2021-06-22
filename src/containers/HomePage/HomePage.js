@@ -99,7 +99,6 @@ const HomePage = (props) => {
     const duplicateResume = (index) => {
         props.db.ref(`resumeContents/${props.user.uid}/${index}`).once('value').then((snapshot) => {
 
-            console.log(snapshot.val());
             let newResumes = [...resumes];
             newResumes.push({...resumes[index]});
 
