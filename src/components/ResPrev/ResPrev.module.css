@@ -1,13 +1,12 @@
 .ResPrev{
     display: flex;
     flex-direction: row;
-    width: 90%;
     height: 100%;
+    width: 60%;
     cursor: pointer;
     background-color: white;
     transition: 0.2s;
     align-items: center;
-    justify-content: space-between;
 }
 
 .container{
@@ -43,7 +42,23 @@
     cursor: pointer;
 }
 
+.dupButton{
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    color: #484b36;
+    width: 30%;
+    height: 100%;
+    cursor: pointer;
+}
+
 .button:hover{
+    background-color: #484b36;
+    color: white;
+    transition: 0.2s;
+}
+
+.dupButton:hover{
     background-color: #484b36;
     color: white;
     transition: 0.2s;
@@ -74,4 +89,5 @@ a:active, a:visited, a:link{
         width: 10%;
         font-size: 20px
     }
+
 }

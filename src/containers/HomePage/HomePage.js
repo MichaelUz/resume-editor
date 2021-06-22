@@ -96,11 +96,27 @@ const HomePage = (props) => {
         });
     }
 
+    const duplicateResume = (index) => {
+        props.db.ref(`resumeContents/${props.user.uid}/${index}`).once('value').then((snapshot) => {
+
+            console.log(snapshot.val());
+            let newResumes = [...resumes];
+            newResumes.push({...resumes[index]});
+
+            //Add resume name and contents to database
+            props.db.ref(`resumes/${props.user.uid}`).set(newResumes);
+            props.db.ref(`resumeContents/${props.user.uid}/${resumes.length}`).set(snapshot.val());
+
+            updateResumes(newResumes);
+        });
+    }
+
 
     //Render resume previews
     let resumesJSX = resumes.map((resume, index) => {
         return <ResPrev 
                     delete={() => removeResume(index)}
+                    duplicate={() => duplicateResume(index)}
                     click={() => loadResume(index)} 
                     key={'resprev' + index} 
                     title={resume.name}

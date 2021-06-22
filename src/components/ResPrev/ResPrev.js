@@ -9,6 +9,7 @@ const ResumePreview = (props) => {
             <div className={classes.ResPrev} onClick={props.click}>
                 <p className={classes.p}>{props.title}</p>       
             </div>
+            <button className={classes.dupButton} onClick={props.duplicate}>Duplicate</button>
             <button className={classes.button} onClick={props.delete}>X</button>
         </div>
     );
