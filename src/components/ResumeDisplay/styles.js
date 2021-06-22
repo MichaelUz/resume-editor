@@ -42,7 +42,7 @@ const descriptionSize = 10;
 
 //other
 const sectionPadding = '15pt';
-const sectionMargin = '8pt';
+const sectionMargin = '13pt';
 
 //Word -> PDF font size
 // Word * 1.39 = PDF font size
